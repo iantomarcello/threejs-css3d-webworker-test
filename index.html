@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>Test | CSS3DObject in WebWorker</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 150;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Things are spawn via the devil that is JavaScript -->
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
