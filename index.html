@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Test | CSS3DObject in WebWorker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: "Roboto Slab", serif;
       }
 
       canvas {
@@ -18,10 +20,24 @@
         position: absolute;
         z-index: 150;
       }
+
+      #heading {
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+        text-shadow: 1px 1px 0px rgb(43, 43, 43);
+        position: absolute;
+        z-index: 10000;
+        transform: translateX(-50%);
+        top: 15px;
+        left: 50%;;
+      }
     </style>
   </head>
   <body>
     <canvas id="canvas"></canvas>
+    <h1 id="heading">Testing whether CSS3DRenderer works<br>with Web Workers</h1>
     <!-- Things are spawn via the devil that is JavaScript -->
     <script src="script.js" type="module"></script>
   </body>
