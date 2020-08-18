@@ -3,19 +3,20 @@
  */
 
 const webGLCanvas = document.getElementById('webGL');
+const css3DCanvas = document.getElementById('css3D');
 const offscreen = webGLCanvas.transferControlToOffscreen();
 const worker = new Worker( 'worker.js', { type: 'module' } );
+const ab = new ArrayBuffer(8);
 worker.postMessage( {
 	drawingSurface: offscreen,
 	width: webGLCanvas.clientWidth,
 	height: webGLCanvas.clientHeight,
 	pixelRatio: window.devicePixelRatio,
-	path: '../../'
+  ab,
 }, [ offscreen ] );
 
 /**
  *  CSS3D
- */
 
 import { Scene, PerspectiveCamera } from 'three';
 import { CSS3DObject, CSS3DRenderer } from 'three/examples/jsm/renderers/CSS3DRenderer.js';
@@ -41,3 +42,4 @@ cssRenderer.domElement.style.top = 0;
 css3DCanvas.appendChild(cssRenderer.domElement);
 
 cssRenderer.render(scene, camera);
+*/
